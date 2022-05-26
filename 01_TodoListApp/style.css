@@ -107,6 +107,7 @@ li {
 .task-box {
     margin: 20px 5px;
     padding: 0 20px 10px 25px;
+    border-bottom: 1px solid #ccc;
 }
 
 .task-box .task {
