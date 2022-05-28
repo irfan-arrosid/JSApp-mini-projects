@@ -140,6 +140,10 @@ li {
     word-wrap: break-word;
 }
 
+.task label p.checked {
+    text-decoration: line-through;
+}
+
 .task .settings {
     cursor: pointer;
     position: relative;
@@ -158,7 +162,7 @@ li {
     right: -4px;
 }
 
-.settings:hover .task-menu {
+.settings .task-menu.show {
     transform: scale(1);
 }
 
