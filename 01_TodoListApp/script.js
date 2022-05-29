@@ -1,4 +1,5 @@
 const taskInput = document.querySelector(".task-input input"),
+    filters = document.querySelectorAll(".filters span"),
     taskBox = document.querySelector(".task-box");
 
 let editId;
@@ -6,13 +7,22 @@ let isEditedTask = false;
 // getting localstorage todo-list
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 
-function showTodo() {
+filters.forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector("span.active").classList.remove("active");
+        btn.classList.add("active");
+        showTodo(btn.id);
+    });
+});
+
+function showTodo(filters) {
     let li = "";
     if (todos) {
         todos.forEach((todo, id) => {
             // if todo status is completed, set the isCompleted value to checked
             let isCompleted = todo.status == "completed" ? "checked" : "";
-            li += `<li class="task">
+            if (filters == todo.status || filters == "all") {
+                li += `<li class="task">
                      <label for="${id}">
                          <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${isCompleted}>
                          <p class="${isCompleted}">${todo.name}</p>
@@ -25,11 +35,12 @@ function showTodo() {
                          </ul>
                      </div>
                  </li>`;
+            }
         });
     }
-    taskBox.innerHTML = li;
+    taskBox.innerHTML = li || `<span>You don't have any task here</span>`;
 }
-showTodo();
+showTodo("all");
 
 function showMenu(selectedTask) {
     let taskMenu = selectedTask.parentElement.lastElementChild;
