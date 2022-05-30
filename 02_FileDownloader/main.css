@@ -1,1 +1,89 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(135deg, #4AB1FF, #2D5CFE);
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 500px;
+  background: #fff;
+  padding: 30px 30px;
+  border-radius: 10px;
+}
+
+.wrapper h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.wrapper p {
+  font-size: 16px;
+  color: #474747;
+  margin-bottom: 20px;
+}
+
+.wrapper input {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 19px;
+  border: 1px solid #b3b2b2;
+  outline: none;
+}
+
+.wrapper input::-webkit-input-placeholder {
+  color: #b3b2b2;
+}
+
+.wrapper input:-ms-input-placeholder {
+  color: #b3b2b2;
+}
+
+.wrapper input::-ms-input-placeholder {
+  color: #b3b2b2;
+}
+
+.wrapper input::placeholder {
+  color: #b3b2b2;
+}
+
+.wrapper button {
+  width: 100%;
+  background: #2D5CFE;
+  opacity: 0.9;
+  padding: 15px 0;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.wrapper button:hover {
+  background: #2D5CFE;
+  opacity: 0.8;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+/*# sourceMappingURL=main.css.map */
