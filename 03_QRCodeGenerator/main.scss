@@ -16,9 +16,14 @@ body {
 
 .wrapper {
     max-width: 500px;
+    height: 300px;
     background-color: #fff;
     border-radius: 10px;
     padding: 30px 30px;
+    transition: height 0.2s ease;
+    .active {
+        height: 500px;
+    }
     h1 {
         font-size: 24px;
         font-weight: 500;
@@ -43,6 +48,7 @@ body {
     }
     button {
         width: 100%;
+        margin-bottom: 20px;
         background: #2D5CFE;
         opacity: 0.9;
         padding: 15px 0;
@@ -56,5 +62,27 @@ body {
             opacity: 0.8;
             transform: scale(0.98);
         }
+    }
+    .qr-code {
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 30px 0;
+        pointer-events: none;
+        img {
+            width: 170px;
+        }
+    }
+}
+
+.wrapper.active {
+    height: 550px;
+    .qr-code {
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.5s 0.05s ease;
     }
 }
