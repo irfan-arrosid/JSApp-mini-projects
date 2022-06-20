@@ -65,9 +65,9 @@ body {
             }
             .error {
                 display: none;
-                .error-txt {
-                    color: #dc3435;
-                }
+            }
+            .error-txt {
+                color: #dc3435;
             }
         }
         // .forgot {
@@ -90,6 +90,14 @@ body {
                 background: #2c52ed;
             }
         }
+        .field.error {
+            input {
+                border-color: #dc3435;
+            }
+            .error {
+                display: block;
+            }
+        }
     }
     a {
         color: #5372F0;
@@ -105,7 +113,7 @@ body {
 }
 
 form .field.shake {
-    animation: shake 0.3s ease-in-out infinite;
+    animation: shake 0.3s ease-in-out;
 }
 
 @keyframes shake {

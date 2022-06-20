@@ -99,7 +99,7 @@ body {
   display: none;
 }
 
-.wrapper form .field .error .error-txt {
+.wrapper form .field .error-txt {
   color: #dc3435;
 }
 
@@ -121,6 +121,14 @@ body {
   background: #2c52ed;
 }
 
+.wrapper form .field.error input {
+  border-color: #dc3435;
+}
+
+.wrapper form .field.error .error {
+  display: block;
+}
+
 .wrapper a {
   color: #5372F0;
   text-decoration: none;
@@ -136,8 +144,8 @@ body {
 }
 
 form .field.shake {
-  -webkit-animation: shake 0.3s ease-in-out infinite;
-          animation: shake 0.3s ease-in-out infinite;
+  -webkit-animation: shake 0.3s ease-in-out;
+          animation: shake 0.3s ease-in-out;
 }
 
 @-webkit-keyframes shake {
