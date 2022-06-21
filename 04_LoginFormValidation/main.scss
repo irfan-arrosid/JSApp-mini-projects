@@ -98,6 +98,9 @@ body {
                 display: block;
             }
         }
+        .field.shake {
+            animation: shake 0.3s ease-in-out;
+        }
     }
     a {
         color: #5372F0;
@@ -112,21 +115,20 @@ body {
     }
 }
 
-form .field.shake {
-    animation: shake 0.3s ease-in-out;
-}
-
 @keyframes shake {
     0%,
     100% {
         margin-left: 0px;
+        margin-right: 0px;
     }
     20%,
     80% {
         margin-left: -12px;
+        margin-right: 12px;
     }
     40%,
     60% {
         margin-left: 12px;
+        margin-right: -12px;
     }
 }
